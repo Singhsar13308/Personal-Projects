@@ -56,7 +56,7 @@ def summarize(text):
 
     chat_log = []
 
-    openai.api_key = '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'
+    openai.api_key = 'api_key'
     #giving summary
     prompt = "Briefly summarize the following text:\n\n" + text
 
@@ -138,9 +138,7 @@ if user_inp == 'bionic':
 
 
 
-#bionic_response_get = BeautifulSoup(response.text, 'html.parser')
 
-#bionic_response_stripped = bionic_response_get.find('div', class_='bionic-reader-container').text.strip()
 
 
 
