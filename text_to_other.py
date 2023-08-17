@@ -14,7 +14,7 @@ url = "https://bionic-reading1.p.rapidapi.com/convert"#bionic api link
 
 user_inp = input("Would you like to convert the pdf to audio, convert to a bionic reading format, or have a summary of the pdf: ")
 
-open_pdf = PyPDF2.PdfReader(open('Sarthak Singh Resume.pdf', 'rb'))#open pdf
+open_pdf = PyPDF2.PdfReader(open('FILE_NAME.pdf', 'rb'))#open pdf
 
 bionic_text = " "
 
@@ -30,16 +30,8 @@ for page in (open_pdf.pages):
 #-------------------------
 def audio_convert(cleaned_text):
 
-  #  open_pdf = PyPDF2.PdfReader(open('The Little Prince.pdf', 'rb'))
-
     speaker = pyttsx3.init()
-
-    # for page in (open_pdf.pages):
-    #     text = page.extract_text()
-
-    #     cleaned_text = text.strip().replace('\n', ' ')
-    #     #print(cleaned_text)
-    
+      
     speaker.save_to_file(cleaned_text, 'audio.mp3')
 
     speaker.runAndWait()
@@ -79,7 +71,6 @@ def summarize(text):
 
     #post summary questions
 
-    
 
     print("You may ask further questions about the text.\nSay \"Done!\" when finished with questions: \n")
     
